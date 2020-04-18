@@ -3,14 +3,14 @@ baseurl: ""
 url: "https://hsolemio-lee.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Sol Dev Blog                                    # site's title
+title: Sol's Dev Blog                                    # site's title
 description: "This is Sol's dev blog"      # used by search engines
-avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
+avatar: assets/img/roger-crop.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
-header_text: Welcome <code>Sol Dev Blog</code>  # Change Blog header text
-header_feature_image: assets/img/pexels/triangular.jpeg
+header_text: Welcome to    <code>Sol's Dev Blog</code>  # Change Blog header text
+header_feature_image: assets/img/pexels/dev-belvue1.jpg
 footer_text: >
   Powered by Hansol
 
