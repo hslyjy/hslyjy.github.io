@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 코어자바스크립트 - 01. 데이터 할당
+title: 코어 자바스크립트 - 01.데이터 할당
 tags: [javascript, frontend, 코어 자바스크립트]
 author: sol
 ---
