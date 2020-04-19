@@ -1,7 +1,8 @@
 ---
 layout: post
-title: 행복한 개발자가 되고픈 Sol의 개발 블로그.
+title: 행복한 개발자가 되고픈 Sol의 개발 블로그
 tags: [Sol, frontend, backend, java, javascript, react, vue, python]
+author: sol
 ---
 
 # 행복한 개발자...
