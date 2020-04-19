@@ -4,7 +4,7 @@ title: What's your title
 hide_title: true
 feature-img: assets/img/pexels/story.jpeg
 author: mhagnumdw
-tags: [Test, Lorem]
+tags: []
 ---
 
 This is an example of a post which includes a feature image that has a
