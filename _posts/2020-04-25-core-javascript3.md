@@ -132,6 +132,7 @@ obj.outer();
 ### 3-1-3. 콜백 함수 호출 시 그 함수 내부에서의 this
 
 다음 예제를 보면서 이해를 해보자.
+
 예제 3-5
 ```js
 setTimeout(function() {console.log(this);}, 300);               //(1)
