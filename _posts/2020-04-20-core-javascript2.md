@@ -1,8 +1,15 @@
 ---
 layout: post
 title: 코어 자바스크립트 - 02.실행 컨텍스트
-tags: [javascript, frontend, 코어 자바스크립트]
+description: 자바스크립트의 기본 동작 원리에 대해서 물어보면 아는 사람이 몇이나 될까? 이번 포스팅에서는 자바스크립트가 코드를 어떤 과정으로 실행하는지 알아본다.
+tags: 
+    - javascript
+    - frontend
+    - 코어 자바스크립트
 author: sol
+image: /assets/img/corejavascript.PNG
+optimized_image: /assets/img/opt_corejavascript.png
+category: code
 ---
 
 자바스크립트의 기본 동작 원리에 대해서 물어보면 아는 사람이 몇이나 될까?<br>

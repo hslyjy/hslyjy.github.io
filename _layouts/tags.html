@@ -1,98 +1,38 @@
 ---
-layout: page
+layout: minimal
 ---
 
-<div class="home">
+{% assign date_format = site.date_format | default: "%m/%d/%Y" %}
 
-<!-- cycles through posts to get tags -->
-{% assign rawtags = "" %}
-{% for post in site.posts %}
-{% if post.tags.size > 0 %}
-{% assign post_tags = post.tags | join:'|' | append:'|' %}
-{% assign rawtags = rawtags | append:post_tags %}
-{% endif %}
-{% endfor %}
-
-<!-- cycles through portfolio collection to get tags -->
-{% assign portfolio =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq %}
-{% for tag in portfolio %}
-{% assign portfolio_tags = tag | join: '|' | append: '|' %}
-{% assign rawtags = rawtags | append: portfolio_tags %}
-{% endfor %}
-
-<!-- cycles through pages to get tags -->
-{% for page in site.pages %}
-{% if page.tags.size > 0 %}
-{% assign page_tags = page.tags | join:'|' | append:'|' %}
-{% assign rawtags = rawtags | append:page_tags %}
-{% endif %}
-{% endfor %}
-
-<!-- Displays the list of tags-->
-{% include tags_list.html tags=rawtags %}
-
-    <!-- Displays the posts and pages that contains the tag-->
-    <div class="posts">
-        {% for tag in tags %}
-        <h3 id="{{ tag | cgi_escape }}" class="tag-anchor">
-            <a href="#{{ tag | cgi_escape }}"><i class="fa fa-tag fa-fw"></i> {{ tag }}</a>
-            <a href="#{{ page.title }}" style="float: right"><i class="fa fa-chevron-up" aria-hidden="true"> </i> </a>
-
-        </h3>
-
-        <!-- Posts and collection for each tags -->
-        <div class="tag-posts">
-
-            <!-- Pages -->
-            {% for page in site.pages %} 
-                {% if page.tags contains tag %}
-                <h5 class="tag-title">
-                    <a href="{{ page.url | relative_url }}">
-                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                        {{ page.title }}
-                    </a>
-                    
-                    <div class="meta">
-                        {{ "today" | date: "%B %-d, %Y" }}
-                    </div>
-                </h5>
-                {% endif %} 
-            {% endfor %} 
-            
-            <!-- Posts -->
-            {% for post in site.posts %} 
-                {% if post.tags contains tag %}
-                <h5 class="tag-title">
-                    <a href="{{ post.url | relative_url }}">
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                        {{ post.title }}
-                    </a>
-                    
-                    <div class="meta">
-                        {{ post.date | date: "%B %-d, %Y" }}
-                    </div>
-                </h5>
-                {% endif %} 
-            {% endfor %} 
-            
-            <!-- Portfolio -->
-            {% for note in site.portfolio %} 
-                {% if note.tags contains tag %}
-                <h5 class="tag-title">
-                    <a href="{{ note.url | relative_url }}">
-                        <i class="fa fa-file-o" aria-hidden="true"></i>
-                        {{ note.title }}
-                    </a>
-                
-                    <div class="meta">
-                        {{ note.date | date: "%B %-d, %Y" }}
-                    </div>
-                </h5>
-                {% endif %} 
-            {% endfor %}
-
-        </div>
-        {% endfor %}
-
-    </div>
+<div class="tags">
+  {% assign tags_list = site.tags %}
+    {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %}
+          <a href="#{{ tag | slugify }}">#{{ tag }}</a>
+      {% endfor %}
+    {% else %}
+      {% for tag in tags_list %}
+          <a href="#{{ tag[0] | slugify }}">#{{ tag[0] }}</a>
+      {% endfor %}
+    {% endif %}
+  {% assign tags_list = nil %}
 </div>
+
+{% for tag in site.tags  %}
+  <a class="post-anchor" id="{{ tag[0] | slugify }}"></a>
+  <div class="tag-title">
+    <span>#{{ tag[0] }}</span>
+  </div>
+  <ul class="post-list">
+      {% assign pages_list = tag[1] %}
+      {% for post in pages_list reversed %}
+          {% if post.title != null and post.is_generated != true %}
+            {% if group == null or group == post.group %}
+              <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time></a></li>
+            {% endif %}
+          {% endif %}
+      {% endfor %}
+      {% assign pages_list = nil %}
+      {% assign group = nil %}
+  </ul>
+{% endfor %}

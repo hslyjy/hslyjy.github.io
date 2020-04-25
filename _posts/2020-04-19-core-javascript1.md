@@ -1,8 +1,16 @@
 ---
 layout: post
 title: 코어 자바스크립트 - 01.데이터 할당
-tags: [javascript, frontend, 코어 자바스크립트]
+subtitle: 
+description: 현업에서 개발하며 사실 자바스크립트에 대해 체계적으로 공부해 본 적이 없다. 개발을 하면서 그때 그때 구글과 동료들과 익힌 지식으로 돌아가는 코드만 짜왔고 문제가 생기면 근본적인 원인을 찾기 보다는 이것 저것 바꿔보고 구글링하며 해결했다. 실질적인 원인보다는 단순히 "이렇게 하면 문제가 생기는구나"하고 배경지식 없는 경험만 쌓였다. 
+tags: 
+    - javascript
+    - frontend
+    - 코어 자바스크립트
 author: sol
+image: /assets/img/corejavascript.PNG
+optimized_image: /assets/img/opt_corejavascript.png
+category: code
 ---
 
 현업에서 개발하며 사실 자바스크립트에 대해 체계적으로 공부해 본 적이 없다. 개발을 하면서 그때 그때 구글과 동료들과 익힌 지식으로 돌아가는 코드만 짜왔고 문제가 생기면 근본적인 원인을 찾기 보다는 이것 저것 바꿔보고 구글링하며 해결했다. 실질적인 원인보다는 단순히 "이렇게 하면 문제가 생기는구나"하고 배경지식 없는 경험만 쌓였다. 
@@ -34,16 +42,16 @@ var a;
 #### 1-2. 데이터 할당
 
 예제 1-2
-{% highlight js %}
+```js
 var a;        //변수 a 선언
 a = 'abc';    //변수 a에 데이터 할당
 
 var a = 'abc' //변수 선언과 할당을 한 문장으로 표현
-{% endhighlight %}
+```
 <br>
 
 표 1-1<br>
-{% include aligner.html images="20200419/table1.PNG" %}
+![표1-1](/assets/img/20200419/table1.PNG "표 1-1")
 
 예제 1-2를 표현하면 아래와 같다.
 > 1. 변수 영역에서 빈 공간(@1003) 확보
@@ -55,10 +63,10 @@ var a = 'abc' //변수 선언과 할당을 한 문장으로 표현
 <br><br>
 
 예제 1-3
-{% highlight js %}
+```js
 var a = 10;
 var b = 10;
-{% endhighlight %}
+```
 
 예제 1-3의 경우에는 또 다른 변수 b를 더 선언했다. 그렇다면 b의 데이터 할당은 어떻게 될까?
 여기서 중요한 것은 10이라는 값이 새로운 주소에 할당되고 b에 해당 주소가 대입되는 것이 아니라는 것이다.
@@ -76,15 +84,15 @@ b는 a의 10과 같은 주소를 참조하고 새로운 데이터 영역을 더 
 <br>
 
 예제 1-4
-{% highlight js %}
+```js
 var obj1 = {
     a: 1,
     b: 'bbb'
 };
-{% endhighlight %}
+```
 
 표 1-2
-{% include aligner.html images="20200419/table1-2.PNG" %}
+![표1-2](/assets/img/20200419/table1-2.PNG "표1-2")
 
 > 1. 변수 영역의 빈 공간(@1003)을 확보하고, 그 주소의 이름을 obj1으로 지정
 > 2. 임의의 데이터 저장공간(@5002)에 데이터를 저장하려고 보니 여러 개의 프로퍼티로 이루어진 데이터 그룹이다. 내부 프로퍼티들을 저장하기 위해 별도의 변수 영역을 마련하고, 그 영역의 주소(@7103~?)를 @5002에 저장
@@ -100,7 +108,7 @@ var obj1 = {
 ### 1-3. 변수 복사 비교
 
 예제 1-5
-{% highlight js %}
+```js
 var a = 10;
 var b = a;
 
@@ -112,7 +120,7 @@ obj2.c = 20;
 
 console.log(a == b);
 console.log(obj1 == obj2);
-{% endhighlight %}
+```
 
 예제 1-5의 결과를 예측하면 어떨까?
 이제는 속지 않는다. 결과부터 얘기하면 false, true이다.
@@ -120,7 +128,7 @@ console.log(obj1 == obj2);
 이러한 결과가 왜 나오는지 아래 표를 보면서 분석해보자.
 
 표 1-3
-{% include aligner.html images="20200419/table1-3.PNG" %}
+![표1-3](/assets/img/20200419/table1-3.PNG "표1-3")
 
 표 1-3과 같이 obj1과 obj2를 복사한 후 obj2.c의 값을 변경했을때, c의 주소만 @5001 => @5005로 변경된 것을 볼 수 있다.<br> 
 obj1은 여전히 @5002를 참조하고 @5002는 c에 해당하는 @7103을 참조하고 있기 때문에 obj2.c = 20으로 인해 변경된 @7103을 똑같이 참조하여 변경된 c값을 들고 있는 것이다.<br><br>
@@ -129,7 +137,7 @@ obj1은 여전히 @5002를 참조하고 @5002는 c에 해당하는 @7103을 참�
 아래 깊은 복사 예제 몇가지를 소개한다.
 
 예제 1-6
-{% highlight js %}
+```js
 // 재귀를 이용하여 모든 프로퍼티를 순회하여 복사하는 방법
 var copyObjectDeep = function (target) {
     var result = {};
@@ -151,10 +159,10 @@ var obj = {
     }
 };
 var obj2 = copyObjectDeep(obj);
-{% endhighlight %}
+```
 
 예제 1-7
-{% highlight js %}
+```js
 // json을 이용한 방법
 var copyObjectViaJson = (target) => {
     return JSON.parse(JSON.stringify(target));
@@ -178,7 +186,7 @@ obj.b.d[1] = 3;
 
 console.log(obj);
 console.log(obj2);
-{% endhighlight %}
+```
 
 이 외에 외부 라이브러리를 이용한 방법 등이 있음.
 
@@ -191,7 +199,7 @@ console.log(obj2);
 
 
 예제 1-8
-{% highlight js %}
+```js
 var a;
 console.log(a); // (1) undefined. 값을 대입하지 않은 변수에 접근
 
@@ -202,12 +210,12 @@ function func() {};
 var c = func();
 console.log(c); // (3) return 값이 없으면 undefined를 반환한 것으로 간주
 
-{% endhighlight %}
+```
 
 그런데 위의 (1)처럼 값을 대입하지 않는 경우에 대해 배열의 경우 조금 특이한 동작을 확인할 수 있다.
 
 예제 1-9
-{% highlight js %}
+```js
 var arr1 = [undefined, 1];
 var arr2 = [];
 arr2[1] = 1;
@@ -217,8 +225,7 @@ console.log(arr1.map((v, i) => v+i));
 console.log(arr2.map((v, i) => v+i));
 console.log(arr1.filter((v, i)=>!v));
 console.log(arr2.filter((v, i)=>!v));
-
-{% endhighlight %}
+```
 
 예제 1-9의 결과들을 보면 재밌는 결과를 볼 수 있다. 직접 undefined를 할당한 arr1에 대해서는 일반적으로 알고 있는 대로 배열의 모든 요소를 순회해서 결과를 출력하지만 arr2에 대한 결과를 보면, 각 메서드들이 비어 있는 요소에 대해서는 어떠한 처리도 하지 않고 건너뛰었음을 알 수 있다.
 

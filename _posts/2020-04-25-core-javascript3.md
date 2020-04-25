@@ -1,8 +1,15 @@
 ---
 layout: post
 title: 코어 자바스크립트 - 03.this (1)
-tags: [javascript, frontend, 코어 자바스크립트]
+description: 자바스크립트로 코드를 짜다보면 많은 사람들이 this에 대해 혼란을 느낀다. 대부분의 객체지향 언어의 경우 this는 클래스로 생성한 인스턴스를 의미하지만 자바스크립트에서는 상황에 따라 this가 바라보는 대상이 달라진다.
+tags: 
+    - javascript
+    - frontend
+    - 코어 자바스크립트
 author: sol
+image: /assets/img/corejavascript.PNG
+optimized_image: /assets/img/opt_corejavascript.png
+category: code
 ---
 
 자바스크립트로 코드를 짜다보면 많은 사람들이 this에 대해 혼란을 느낀다.<br> 
