@@ -1,8 +1,22 @@
 ---
+date: 2020-04-18 12:26:40
 layout: post
 title: 행복한 개발자가 되고픈 Sol의 개발 블로그
-tags: [Sol, frontend, backend, java, javascript, react, vue, python]
+subtitle: 블로그를 시작하면서..
+description: 행복한 개발자가 되기 위해 고민하려고 노력하는(?) 주니어 개발자다.
+tags: 
+   - Sol
+   - frontend
+   - backend
+   - java
+   - javascript
+   - react
+   - vue
+   - python
 author: sol
+image: /assets/img/dev-belvue1.jpg
+optimized_image: /assets/img/rsz_dev-belvue1.jpg
+category: life
 ---
 
 # 행복한 개발자...
