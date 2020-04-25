@@ -3,7 +3,7 @@ date: 2020-04-18 12:26:40
 layout: post
 title: 행복한 개발자가 되고픈 Sol의 개발 블로그
 subtitle: 블로그를 시작하면서..
-description: 행복한 개발자가 되기 위해 고민하려고 노력하는(?) 주니어 개발자다.
+description: 행복한 개발자가 되기 위해 고민하려고 노력하는 주니어 개발자다.
 tags: 
    - Sol
    - frontend
