@@ -1,13 +1,9 @@
 ---
 layout: post
-title: 코어 자바스크립트 - 03.this
+title: 코어 자바스크립트 - 03.this (1)
 tags: [javascript, frontend, 코어 자바스크립트]
 author: sol
 ---
-
- [코어 자바스크립트 (정재남 저)](http://www.yes24.com/Product/Goods/78586788) 도서를 참고하였습니다.
-<br><br>  
-
 
 # 03. this (1)
 
@@ -171,4 +167,5 @@ Cat { bark: '야옹', name: 'roger', age: 6 } Cat { bark: '야옹', name: 'mong'
 6번째 생성자 함수 내부에서의 this는 roger 인스턴스를,<br>
 7번째 생성자 함수 내부에서의 this는 mong 인스턴스를 가리키는 것을 알 수 있다. 
 
-
+ [코어 자바스크립트 (정재남 저)](http://www.yes24.com/Product/Goods/78586788) 도서를 참고하였습니다.
+<br><br>  
