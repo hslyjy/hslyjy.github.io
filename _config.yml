@@ -35,7 +35,7 @@ two_columns_layout: true
 
 # Advanced Settings
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "http://hsolemio-lee.github.io" # the base hostname & protocol for your site
 google_analytics: "UA-163955081-1"
 language: "en"
 categories_folder: category
