@@ -8,8 +8,8 @@
             </button>
         </div>
     </div>
-    {% if page.previous %}
-        {% assign recommendation = page.previous %}
+    {% if page.next %}
+        {% assign recommendation = page.next %}
     {% else %}
         {% assign previous_posts = site.posts | where_exp:"post","post.is_generated != true" | where_exp:"post","post.path != page.path" %}
         {% assign shuffled_array = next_posts | shuffle %}
