@@ -9,7 +9,7 @@ tags:
 author: sol
 image: /assets/img/20200504/noida.jpg
 optimized_image: /assets/img/20200504/noida.jpg
-category: business travel
+category: business trip
 ---
 
 # 노이다 출장이 정해지기까지...
