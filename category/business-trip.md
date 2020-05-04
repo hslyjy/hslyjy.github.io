@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Business Travel
-slug: business travel
+title: Business Trip
+slug: business trip
 description: A category for business travel related posts.
 ---
