@@ -1,15 +1,13 @@
 ---
 layout: post
-title: 인도 노이다 출장 - 프로젝트의 시작
-description: 아무것도 모르고 시작했던 첫번째 해외 출장 워크샵. 맨 몸으로 부딪쳤던 첫 해외 출장에 대한 이야기이다.
+title: 옴니채널 프로젝트의 시작
+description: 짧다면 짧다할 수 있는 회사생활이지만 지독하게 강렬했던, 혼자만의 이야기로 남겨두기 아까운 경험으로 2019년 상반기를 장식했다. 여러 회사가 부딪치며 서로가 유리한 결과를 이끌어내기 위한 치열한 눈치 싸움, 각종 책임에서 자유로워지기 위한 경쟁, 갑을관계를 기반으로한 약육강식의 의사결정 등 정글과도 같았던 노이다, 시애틀, 런던에서의 경험을 블로그를 통해 공유하려한다.
 tags: 
     - business trip
-    - India
-    - Noida
     - Omni Channel
 author: sol
 image: /assets/img/20200504/noida.jpg
-optimized_image: /assets/img/20200504/noida.jpg
+optimized_image: /assets/img/20200504/opt_noida.jpg
 category: business trip
 ---
 
